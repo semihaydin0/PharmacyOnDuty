@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FontChanger" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/leaguespartanmedium</item>
+    </style>
+
+    <!-- Toast Style -->
+    <style name="toastTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/leaguespartanmedium</item>
+    </style>
+</resources>
