@@ -33,7 +33,7 @@ public class ListScreen extends AppCompatActivity {
     private ListView lv;
     String city,town,name,phone,address;
     private static String API_URL = "YOUR_API_URL";
-    ArrayList<HashMap<String,String>> eczaneList;
+    ArrayList<HashMap<String,String>> pharmacyList;
     AutoCompleteTextView autoCompleteTxt;
     ArrayAdapter<String> adapterItems;
 
@@ -45,13 +45,13 @@ public class ListScreen extends AppCompatActivity {
         autoCompleteTxt.setText(MainActivity.item);
         adapterItems = new ArrayAdapter<String>(this,R.layout.list_item,MainActivity.items);
         autoCompleteTxt.setAdapter(adapterItems);
-        eczaneList = new ArrayList<>();
+        pharmacyList = new ArrayList<>();
         lv = findViewById(R.id.listview);
         lv.setClickable(true);
         autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                eczaneList.clear();
+                pharmacyList.clear();
                 lv.setAdapter(null);
                 GetData getData = new GetData();
                 getData.execute();
@@ -135,7 +135,7 @@ public class ListScreen extends AppCompatActivity {
                     eczaneler.put("town",town);
                     eczaneler.put("phone",phone_);
                     eczaneler.put("address",address);
-                    eczaneList.add(eczaneler);
+                    pharmacyList.add(eczaneler);
                 }
             }
             catch (JSONException e){
@@ -143,7 +143,7 @@ public class ListScreen extends AppCompatActivity {
             }
             ListAdapter adapter = new SimpleAdapter(
                     ListScreen.this,
-                    eczaneList,
+                    pharmacyList,
                     R.layout.row_layout,
                     new String[] {"name","city","phone","address"},
                     new int[]{R.id.textview,R.id.textview2,R.id.textview3,R.id.textview4});
