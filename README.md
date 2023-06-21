@@ -21,8 +21,7 @@ From [here](https://github.com/semihaydin0/PharmacyOnDuty/blob/main/app/src/main
 
 ## In-App Images
 
-![In-App1](./assets/in-app_1.png)
-![In-App2](./assets/in-app_2.png)
+![In-App](./assets/in-app.png)
 
 ## Made With
 *   Java
@@ -37,6 +36,3 @@ For any problems, you can contact me at the addresses below.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
-
